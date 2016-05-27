@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+  {% block content %}
+    <!--Jumbotron/Main Welcome Text starts here-->
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="container hero">
+
+            <div class="no-margin welcome-note">
+                <h1 >Hello there!</h1>
+                <h3>No matter who you are, where you're from and
+                    what you do. <br>
+
+                    There's perfectly a great need
+                    for you to get a website.
+                </h3>
+                <p><a class="btn btn-primary btn-lg learn_more_btn" href="/learn_more" role="button">Learn more</a></p>
+            </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+  {% endblock %}    <!--Jumbotron/Main Welcome Text ends here-->
+
+
+  {% block footer %}  <!--Footer starts here-->
+
+    <footer class="site-footer footer push">
+        <div class="container">
+           <div class="row footer-name">
+           <p>&copy; copyright <em>code</em>Fortunately 2016</p>
+           </div>
+           <div class="bottom-footer">
+               <ul class="footer-nav">
+                   <li><a href="index.html" class="active">Home</a></li>
+                   <li><a href="/projects">Projects</a></li>
+                   <li><a href="blog.html">Blogs</a></li>
+                   <li><a href="public_access/about.html">About</a></li>
+                   <li><a href="public_access/hire_me.html">Hire me</a></li>
+               </ul>
+           </div>
+        </div>
+    </footer>
+
+    {% endblock %}<!--Footer ends here-->

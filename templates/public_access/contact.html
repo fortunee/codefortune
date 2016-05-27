@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeFortunately</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/hire_me_style.css" rel="stylesheet">
+</head>
+
+<body>
+   <!--Navigation starts here-->
+   
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top no-margin no-padding" role="navigation">
+        <div class="container-fluid">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-fortuneiyke-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a href="../index.html" class="navbar-brand" id="my_logo"><em>code</em>Fortunately</a>
+            </div>
+            
+            <div class="collapse navbar-collapse navbar-right" id="bs-fortuneiyke-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-pencil"></span>Hire me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!--Navigation ends here-->
+    
+    <!--background container for the social media links and contact form starts-->
+    <div class="container bg_cover">
+       
+        <!--Social media buttons starts-->
+        
+        <div class="col-md-4 col-sm-5 social_media">
+                <span class="panel-title  text-center"><h2>Social Media Links</h2></span>
+                <a href="#" class="btn btn-primary btn-lg btn-block fb_btn">Facebook</a>
+                <a href="#" class="btn btn-primary btn-lg btn-block twtr_btn">Twitter</a>
+                <a href="#" class="btn btn-primary btn-lg btn-block g_btn">Google+</a>
+        </div>
+       <!--Social media buttons ends-->
+       
+       <!--contact form starts-->
+        <div class="col-md-8 col-sm-7 contact_form">
+          <span class="panel-title  text-center"><h2>Contact form</h2></span>
+           
+           <form action="routes.py" method="post" class="form-horizontal" id="contactform">
+           
+          <!-- <div class="col-sm-10 col-sm-offset-2 alert alert-success text-center col-md" role="alert">Your message has been sent</div>-->
+
+          <div class="form-group">
+                <label for="contactname" class="col-sm-2 control-label" >Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="contactname" placeholder="Enter Name">
+                </div>
+          </div>
+          
+          <div class="form-group">
+                <label for="contactemail" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="contactemail" placeholder="Email Address">
+                </div>
+          </div>
+          
+          <div class="form-group">
+                <label for="contactsubject" class="col-sm-2 control-label">Subject</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="contactsubject" placeholder="Subject">
+                </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="contactmessage" class="col-sm-2 control-label">Message</label>
+              <div class="col-sm-10">
+                  <textarea name="message" id="contactmessage" rows="10" class="form-control"></textarea>
+              </div>
+          </div>
+          <div class="col-sm-2 col-sm-offset-10">
+              <button type="button" class="btn btn-default" id="contactbtn">Submit</button>
+          </div>  
+        </form>
+       </div>
+       <!--contact form ends-->
+       
+        
+    </div>
+    
+    <!--background container for the social media links and contact form ends-->
+    
+   <!--Footer starts here-->
+    
+    <footer class="site-footer">
+        <div class="container">
+           <div class="row footer-name">
+           <p>&copy; copyright <em>code</em>Fortunately 2016</p>
+           </div>
+           <div class="bottom-footer">
+               <ul class="footer-nav">
+                   <li><a href="../index.html" class="active">Home</a></li>
+                   <li><a href="projects.html">Projects</a></li>
+                   <li><a href="#">Blogs</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="hire_me.html">Hire me</a></li>
+               </ul>
+           </div>
+        </div>
+    </footer>
+    
+    <!--Footer ends here-->
+    
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+    
+        function validateForm(id){
+            if ($('#'+id).val()==null || $('#'+id).val()==""){
+                var div = $('#'+id).closest('div');
+                div.removeClass('has-success');
+                 $('#glypicn'+id).remove();
+                div.addClass('has-error has-feedback');
+                div.append(' <span id="glypicn'+id+'" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
+                return false;
+            }
+            else {
+                var div = $('#'+id).closest('div');
+                div.removeClass('has-error');
+                $('#glypicn'+id).remove();
+                div.addClass('has-feedback has-success');
+                div.append('<span id="glypicn'+id+'" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>')
+                return true;
+            }
+        }
+        $(document).ready(
+        
+            function(){
+                $('#contactbtn').click(function(){
+                    if (!validateForm('contactname')){
+                        return false;
+                    }
+                
+                
+                    if (!validateForm('contactemail')){
+                        return false;
+                    }
+                    
+    
+                    if (!validateForm('contactsubject')){
+                        return false;
+                    }
+                    
+               
+                    if (!validateForm('contactmessage')){
+                        return false;
+                    }
+                    
+                    $('form#contactform').submit();
+                });
+            });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+/**Default margin and padding set starts**/
+
+.no-margin{
+    margin: 0px;
+}
+.no-padding {
+    padding: 0px;
+}
+
+/**Default margin and padding set ends**/
+
+/** makes the footer flush down **/
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 125px; /* .push must be the same height as .footer */
+}
+
+
+/**body custom style starts**/
+
+/* previous background-color #2c3e50*/
+body{
+    background: #480665 url(../images/business_large.jpg) no-repeat fixed;
+    background-size: 100%;
+}
+
+/**Navigation custom style starts**/
+
+.navbar {
+    background-color: #480665;
+   /* margin:0; /*this is actually what removed the gap between nav and the jumbotron*/
+}
+
+#my_logo{
+    color: white;
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 3px 1px slateblue;
+}
+
+#my_logo:hover{
+    color: grey;
+    transition: all .3s ease-in-out;
+}
+
+/**Navigation custom style ends**/
+
+/**Jumbotron or hero custom style starts**/
+
+.jumbotron{
+    background: rgba(0, 0, 1, .7);
+    color: snow;
+    margin: 0;
+    width: 100%;
+}
+
+.learn_more_btn{
+    background: #480665;
+    border: 0;
+    transition: all .3s ease-in-out;
+
+}
+
+.learn_more_btn:hover{
+    background: darkviolet;
+    transition: all .3s ease-in-out;
+}
+
+
+.welcome-note{
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 137px;
+    text-shadow:0px 1px 0px slateblue;
+}
+
+/**Jumbotron or hero custom style ends**/
+
+/**
+    The style below applies to the lrn_mre
+    page.
+**/
+
+.lrn_mre{
+    background: rgba(0,0,1,.7);
+    width: 100%;
+    color: #fff;
+    padding: 30px;
+}
+
+.yes_btn{
+    text-shadow:0px 2px 1px slateblue;
+    transition: all 1s ease-in-out;
+}
+
+.yes_btn:hover{
+    transition: all 1s ease-in-out;
+}
+
+.no_btn{
+    text-shadow:0px 2px 1px slateblue;
+    transition: all 1s ease-in-out;
+}
+
+.no_btn:hover{
+    transition: all 1s ease-in-out;
+}
+
+.lrn_mre_title{
+    text-shadow:0px 3px 1px slateblue;
+}
+
+.right_col{
+    padding: 80px;
+}
+
+/**footer custom style starts**/
+.site-footer{
+    background: #480665;
+    color:seashell;
+    padding: 15px;
+    text-shadow:0px 1px 0px slateblue;
+}
+
+.footer-name{
+    text-align: center;
+    font-weight: bolder
+}
+
+.bottom-footer{
+    border-top: 1px solid grey;
+    text-align: center;
+}
+
+.footer-nav li{
+    display: inline;
+}
+
+.footer-nav a{
+    font-weight: bold;
+    padding: 0px 10px;
+    color: aliceblue;
+}
+
+.footer-nav a:hover{
+    color: slateblue;
+    text-decoration: none;
+    transition:all .1s ease-in;
+}
+
+.footer-nav li:not(:first-child):before{
+    content: '|';
+}
+
+/**footer custom style ends**/

@@ -1,0 +1,115 @@
+.no-margin{
+    margin: 0px;
+}
+.no-padding {
+    padding: 0px;
+}
+
+/* previous background-color #2c3e50*/
+body{
+    background: #480665;
+}
+
+.navbar {
+    background-color: #480665;
+   /* margin:0; /*this is actually what removed the gap between nav and the jumbotron*/
+}
+
+#my_logo{
+    color: white;
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 3px 1px slateblue;
+}
+
+#my_logo:hover{
+    color: grey;
+    transition: all .3s ease-in-out;
+}
+/**
+    modal custom styling starts
+**/
+
+.carousel_text{
+    color: #00BCD4;
+    text-decoration: underline;
+    text-shadow: 0px 1px 1px aqua;
+}
+
+.project_section{
+    background: #B08CC0;
+
+}
+
+.f_p{
+    color: white;
+    text-shadow: 1px 2px 1px aqua;
+    border-bottom: 1px solid black;
+}
+
+
+#projects {
+  color:#fff;
+  font-weight: bold;
+}
+
+.featured{
+    background: rgba(0, 1, 0, .5);
+}
+
+.featured_project{
+    background: #1D1F21;
+    padding: 50px;
+    margin: 20px;
+    transition: all 2s ease-in-out;
+}
+
+.featured_project:hover{
+    background:  #2D1A33;
+    color:white;
+    transition: all 2s ease-in-out;
+}
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img{
+  height:440px;
+}
+
+/**
+    modal custom styling ends
+**/
+
+.site-footer{
+    background: #480665;
+    color:seashell;
+    padding-top: 30px;
+    text-shadow:0px 1px 0px slateblue;
+}
+
+.footer-name{
+    text-align: center;
+    font-weight: bolder
+}
+
+.bottom-footer{
+    border-top: 1px solid grey;
+    text-align: center;
+}
+
+.footer-nav li{
+    display: inline;
+}
+
+.footer-nav a{
+    font-weight: bold;
+    padding: 0px 10px;
+    color: aliceblue;
+}
+
+.footer-nav a:hover{
+    color: slateblue;
+    text-decoration: none;
+    transition:all .1s ease-in;
+}
+
+.footer-nav li:not(:first-child):before{
+    content: '|';
+}
