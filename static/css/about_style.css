@@ -1,0 +1,44 @@
+
+/**
+    The image and the string content I added
+    this page was both included within a 
+    jumbotron class of bootstrap
+    so if you discover any malfunction just
+    remove the jumbotron class and add them 
+    within a div.container class.
+**/
+
+.about_jumbotron{
+    padding:17px;
+}
+
+.about_img{
+    background: #480665;
+    width: 490px;
+}
+.about_title{
+    text-shadow: 1px 3px 1px slateblue;
+    text-align: center;
+}
+
+.about_note{
+    text-align: justify;
+}
+
+#in_links{
+    color: slateblue;
+    text-decoration:none;
+}
+#in_links:hover{
+    color: aquamarine;
+    text-decoration: none;
+    transition:all 1s ease-in-out;
+}
+
+.about_closing_note{
+    text-shadow: 1px 2px 1px slateblue;
+    /**background: rgba(0, 0, 1, .7);**/
+    padding: 0 25px;
+    margin: 0px;
+    color: snow;
+}

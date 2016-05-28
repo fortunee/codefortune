@@ -31,11 +31,11 @@
 
                 <div class="collapse navbar-collapse navbar-right" id="bs-fortuneiyke-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/index"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                        <li><a href="/index">Home</a></li>
                         <li><a href="/projects">Projects</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="public_access/about.html">About me</a></li>
-                        <li><a href="public_access/hire_me.html">Hire me</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/about">About me</a></li>
+                        <li><a href="contact">Contact me</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,14 +76,75 @@
 
   <!--Footer starts here-->
 
-  {% block footer %}
-
-  {% endblock %}
+    <footer class="site-footer footer push">
+        <div class="container">
+           <div class="row footer-name">
+           <p>&copy; copyright <em>code</em>Fortunately 2016</p>
+           </div>
+           <div class="bottom-footer">
+               <ul class="footer-nav">
+                   <li><a href="index.html" class="active">Home</a></li>
+                   <li><a href="/projects">Projects</a></li>
+                   <li><a href="blog.html">Blogs</a></li>
+                   <li><a href="public_access/about.html">About</a></li>
+                   <li><a href="public_access/hire_me.html">Hire me</a></li>
+               </ul>
+           </div>
+        </div>
+    </footer>
 
   <!--Footer ends here-->
 
   <script src="static/js/jquery-1.11.3.min.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
+  <script>
+
+      function validateForm(id){
+          if ($('#'+id).val()==null || $('#'+id).val()==""){
+              var div = $('#'+id).closest('div');
+              div.removeClass('has-success');
+               $('#glypicn'+id).remove();
+              div.addClass('has-error has-feedback');
+              div.append(' <span id="glypicn'+id+'" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
+              return false;
+          }
+          else {
+              var div = $('#'+id).closest('div');
+              div.removeClass('has-error');
+              $('#glypicn'+id).remove();
+              div.addClass('has-feedback has-success');
+              div.append('<span id="glypicn'+id+'" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>')
+              return true;
+          }
+      }
+      $(document).ready(
+
+          function(){
+              $('#contactbtn').click(function(){
+                  if (!validateForm('contactname')){
+                      return false;
+                  }
+
+
+                  if (!validateForm('contactemail')){
+                      return false;
+                  }
+
+
+                  if (!validateForm('contactsubject')){
+                      return false;
+                  }
+
+
+                  if (!validateForm('contactmessage')){
+                      return false;
+                  }
+
+                  $('form#contactform').submit();
+              });
+          });
+
+  </script>
 
 </body>
 </html>

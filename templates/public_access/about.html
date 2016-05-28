@@ -1,58 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>codeFortunately</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="css/about_style.css" rel="stylesheet">
-</head>
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <link href="static/css/about_style.css" rel="stylesheet">
+{% endblock %}
 
-<body>
-    <nav class="navbar navbar-default navbar-inverse navbar-static-top no-margin no-padding" role="navigation">
-        <div class="container-fluid">
-           <div class="navbar-header">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-fortuneiyke-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-                <a href="index.html" class="navbar-brand" id="my_logo"><em>code</em>Fortunately</a>
-            </div>
-            
-            <div class="collapse navbar-collapse navbar-right" id="bs-fortuneiyke-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li class="active"><a href="public_access/about.html"><span class="glyphicon glyphicon-user"></span>About me</a></li>
-                    <li><a href="hire_me.html">Hire me</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+{% block content %}
     <div class="container jumbotron about_jumbotron">
-        <img src="../images/IMG_20150809_143231%20(2)-001.jpg" alt="fortune iyke"  height="400px" width="250px" class="img-responsive col-md-5 col-sm-5 about_img img-circle img-thumbnail">
-        
+        <img src="../../static/images/IMG_20150809_143231%20(2)-001.jpg" alt="fortune iyke"  height="400px" width="250px" class="img-responsive col-md-5 col-sm-5 about_img img-circle img-thumbnail">
+
         <p class="col-md-7 col-sm-7 about_note">
             <h1 class="about_title" >Hi there!</h1>
             <h4 class="text-justify">
-                Fortune is my name and I'm madly in love 
+                Fortune is my name and I'm madly in love
             with playing around with HTML5 and CSS3
-            especially  when it comes to using SASS 
-            and Bootstrap frameworks in building dynamically 
+            especially  when it comes to using SASS
+            and Bootstrap frameworks in building dynamically
             responsive mobile friendly websites. <br> <br>
-            Yes, that makes me more of a front-end 
-            web developer, but my team and I can 
+            Yes, that makes me more of a front-end
+            web developer, but my team and I can
             handle the back-end features if need be. <br> <br>
             Meanwhile I get really social on <a href="http://fb.com/fortune.ik" id="in_links" class="lead">Facebook</a>
             and love to tweet and retweet cool stuff
             on <a href="http://twitter.com/fortune_ik" id="in_links" class="lead">Twitter</a>. <br>
                 But you can write me <span class="glyphicon glyphicon-envelope lead" style="color:slateblue;"></span> via my
-                <a href="hire_me.html" id="in_links" class="lead">contact form</a> or <span class="glyphicon glyphicon-phone-alt lead" style="color:slateblue;"></span> via <span class="lead" style="color:slateblue">+2348069285843</span> 
+                <a href="hire_me.html" id="in_links" class="lead">contact form</a> or <span class="glyphicon glyphicon-phone-alt lead" style="color:slateblue;"></span> via <span class="lead" style="color:slateblue">+2348069285843</span>
             and let's talk about the cool thing you wish to get on the internet. <br> <br>
                  <h3 class="about_closing_note text-center">
                 I'd really love to help you grab your own
@@ -62,27 +33,5 @@
             </h4>
         </p>
     </div>
-   
- 
-    <footer class="site-footer">
-        <div class="container">
-           <div class="row footer-name">
-           <p>&copy; copyright <em>code</em>Fortunately 2016</p>
-           </div>
-           <div class="bottom-footer">
-               <ul class="footer-nav">
-                   <li><a href="../index.html" class="active">Home</a></li>
-                   <li><a href="projects.html">Projects</a></li>
-                   <li><a href="#">Blogs</a></li>
-                   <li><a href="about.html">About</a></li>
-                   <li><a href="hire_me.html">Hire me</a></li>
-               </ul>
-           </div>
-        </div>
-    </footer>
-    
-    <script src="../js/jquery-1.11.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    
-</body>
-</html>
+
+{ %  endblock  % }
