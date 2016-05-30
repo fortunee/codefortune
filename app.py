@@ -28,7 +28,7 @@ def About():
     return render_template('/public_access/about.html')
 
 
-@app.route('/contact', methods=)
+@app.route('/contact', methods=['GET', 'POST'])
 def Contact():
     return render_template('/public_access/contact.html')
 
