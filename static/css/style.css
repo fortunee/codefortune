@@ -7,11 +7,13 @@
     padding: 0px;
 }
 
+
 /**Default margin and padding set ends**/
 
 /** makes the footer flush down **/
 html, body {
     height: 100%;
+    padding-top: 25px;
 }
 .wrapper {
     min-height: 100%;
@@ -118,7 +120,7 @@ body{
 }
 
 .right_col{
-    padding: 80px;
+    padding: 50px;
 }
 
 /**footer custom style starts**/
