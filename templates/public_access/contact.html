@@ -27,36 +27,70 @@
 
           <!-- <div class="col-sm-10 col-sm-offset-2 alert alert-success text-center col-md" role="alert">Your message has been sent</div>-->
 
-          <div class="form-group">
-                <label for="contactname" class="col-sm-2 control-label" >Name</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="contactname" placeholder="Enter Name">
-                </div>
+            {{ form.csrf_token }}
+            <div class="form-group">
+                  <label for="contactname" class="col-sm-2 control-label" >Name</label>
+                  <div class="col-sm-10">
+                      <p>
+                      {{ form.name(placeholder="Name", class="form-control", id="contactname") }}
+                      <span class="error">
+                        {% if form.name.errors %}
+                          {% for error in form.name.errors %}
+                            {{ error }}
+                          {% endfor %}
+                        {% endif %}
+                      </span>
+                      </p>
+                  </div>
           </div>
-
           <div class="form-group">
                 <label for="contactemail" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="contactemail" placeholder="Email Address">
-                </div>
+                      <p>
+                      {{ form.email(placeholder="Email", class="form-control", id="contactmail")}}
+                      <span class="error">
+                        {% if form.email.errors %}
+                          {% for error in form.email.errors %}
+                            {{ error }}
+                          {% endfor %}
+                        {% endif %}
+                      </span>
+                      </p>
+                  </div>
+           </div>
+           <div class="form-group">
+                 <label for="contactsubject" class="col-sm-2 control-label">Subject</label>
+                 <div class="col-sm-10">
+                      <p>
+                      {{ form.subject(placeholder="Subject", class="form-control", id="contactsubject")}}
+                      <span class="error">
+                        {% if form.subject.errors %}
+                          {% for error in form.subject.errors %}
+                            {{ error }}
+                          {% endfor %}
+                        {% endif %}
+                      </span>
+                      </p>
+                 </div>
           </div>
-
-          <div class="form-group">
-                <label for="contactsubject" class="col-sm-2 control-label">Subject</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="contactsubject" placeholder="Subject">
-                </div>
-          </div>
-
           <div class="form-group">
               <label for="contactmessage" class="col-sm-2 control-label">Message</label>
               <div class="col-sm-10">
-                  <textarea name="message" id="contactmessage" rows="10" class="form-control"></textarea>
+                      <p>
+                      {{ form.message(placeholder="Your message",rows='10',cols='87', id="contactmessage", class="form-control", style="width:100%")}}
+                      <span class="error">
+                        {% if form.message.errors %}
+                          {% for error in form.message.errors %}
+                            {{ error }}
+                          {% endfor %}
+                        {% endif %}
+                      </span>
+                      </p>
               </div>
-          </div>
-          <div class="col-sm-2 col-sm-offset-10">
-              <button type="button" class="btn btn-default" id="contactbtn">Submit</button>
-          </div>
+            </div>
+            <div class="col-sm-2 col-sm-offset-10">
+                <button type="button" class="btn btn-default" id="contactbtn">Submit</button>
+            </div>
         </form>
        </div>
        <!--contact form ends-->

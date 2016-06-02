@@ -1,6 +1,10 @@
-from flask import Flask, render_template, redirect, url_for \
+from flask import Flask, render_template, redirect, url_for, \
+    request
+from forms import ContactForm
+import os
 
 app = Flask(__name__)
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 @app.route('/')
 @app.route('/index')
@@ -30,7 +34,9 @@ def About():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def Contact():
-    return render_template('/public_access/contact.html')
+    error = None
+    form = ContactForm(request.form)
+    return render_template('/public_access/contact.html', error=error, form=form)
 
 
 

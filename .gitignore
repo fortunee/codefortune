@@ -1,4 +1,6 @@
 .sass-cache
 *.css.map
 *.pyc
+populating_form_with_former.html
+exports.txt
 venv
