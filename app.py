@@ -36,6 +36,9 @@ def About():
 def Contact():
     error = None
     form = ContactForm(request.form)
+    if request.method == 'POST':
+        return 'Form posted.'
+        
     return render_template('/public_access/contact.html', error=error, form=form)
 
 
