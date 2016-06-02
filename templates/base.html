@@ -58,9 +58,20 @@
   {% endif %}
 
 
+  <!-- success messages -->
+  {% if success %}
+    <div class="col-sm-10 col-sm-offset-2 alert alert-success text-center col-md" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      {{ success }}
+    </div>
+  {% endif %}
+
+
   <!-- flash messages -->
   {% for messages in get_flashed_messages() %}
-    <div class="container alert alert-info alert-dismissible" role="alert">
+    <div class="container alert alert-success alert-dismissible" role="alert">
      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
      </button>
