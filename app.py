@@ -67,7 +67,7 @@ def Contact():
                 return redirect(url_for('Contact'))
             except Exception as e:
                 error = 'Please check your internet connection and try again'
-                return redirect(url_for('Contact'), error=error, form=form)
+                return render_template('/public_access/contact.html', error=error, form=form)
         else:
             error = "Please check the form for the incorrect detail(s) and resend. Thanks"
             return render_template('/public_access/contact.html',
