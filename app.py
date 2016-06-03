@@ -55,7 +55,9 @@ def Contact():
             try:
                 msg = Message(form.subject.data,
                 sender=form.email.data,
-                recipients=[os.environ['EMAIL']])
+                recipients=[os.environ['EMAIL'],
+                    os.environ['SECOND_EMAIL'],
+                    os.environ['THIRD_EMAIL']])
                 msg.body = """
                 From: %s <%s>
                 %s
@@ -65,7 +67,7 @@ def Contact():
                 return redirect(url_for('Contact'))
             except Exception as e:
                 error = 'Please check your internet connection and try again'
-                return render_template('/public_access/contact.html', error=error, form=form)
+                return redirect(url_for('Contact'), error=error, form=form)
         else:
             error = "Please check the form for the incorrect detail(s) and resend. Thanks"
             return render_template('/public_access/contact.html',
