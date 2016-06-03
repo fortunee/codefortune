@@ -52,14 +52,20 @@ def Contact():
     form = ContactForm(request.form)
     if request.method == 'POST':
         if form.validate_on_submit():
-            msg = Message(form.subject.data, sender=form.email.data, recipients=[os.environ['EMAIL']])
-            msg.body = """
-            From: %s <%s>
-            %s
-            """ % (form.name.data, form.email.data, form.message.data)
-            mail.send(msg)
-            flash("Your message has been sent. Thanks, I'll be in touch")
-            return redirect(url_for('Contact'))
+            try:
+                msg = Message(form.subject.data,
+                sender=form.email.data,
+                recipients=[os.environ['EMAIL']])
+                msg.body = """
+                From: %s <%s>
+                %s
+                """ % (form.name.data, form.email.data, form.message.data)
+                mail.send(msg)
+                flash("Your message has been sent. Thanks, I'll be in touch")
+                return redirect(url_for('Contact'))
+            except Exception as e:
+                error = 'Please check your internet connection and try again'
+                return render_template('/public_access/contact.html', error=error, form=form)
         else:
             error = "Please check the form for the incorrect detail(s) and resend. Thanks"
             return render_template('/public_access/contact.html',
@@ -70,4 +76,4 @@ def Contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
