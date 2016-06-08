@@ -38,7 +38,7 @@ def Projects():
 #mapping the blogs page
 @app.route('/blogs')
 def Blogs():
-    return 'Blogs undergoing maintainance. Please check back later'
+    return render_template('/public_access/blogs.html')
 
 #mapping the about page
 @app.route('/about')
@@ -74,8 +74,6 @@ def Contact():
                 error=error, form=form)
     elif request.method == 'GET':
         return render_template('/public_access/contact.html', form=form)
-
-
 
 if __name__ == "__main__":
     app.run()

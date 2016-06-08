@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <link href="static/css/about_style.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <div class="container jumbotron about_jumbotron">
+    <div class="col-md-6 col-sm-6">
+      <h2 class="about_title">YoungTechMind</h2>
+      <img src="../static/images/project_one.PNG" alt="YTM image" class="img-responsive">
+      <p class="text-justify">
+        YoungTechMind educates, encourages and
+        enlightens tech buddies, programmers and gadget freaks. <br>
+        It is currently focused on tech news, programming tutorials,
+        gadget reviews and every computer related issue. <br>
+        All posts on the blog currently made by me.
+        Just check it out each time you want to read about some
+        random tech news and all of it's kind.
+        Thanks.
+      </p>
+      <p><a class="btn btn-primary btn-lg learn_more_btn" href="http://youngtechmind.blogspot.com" role="button">Visit YTM</a></p>
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+      <h2 class="about_title text-left">Inspired Writers</h2>
+      <img src="../static/images/project_two.PNG" alt="IW image" class="img-responsive">
+      <p class="text-justify">
+        Inspired writers is created with thes sole aim
+        of helping those inspired lone writers get their
+        articles up on the internet to either motivate,
+        encourage and most of all inspire people. <br>
+        It shares articles on all interesting topics. <br>
+        There is a few inspired people yet to make posts on it. <br>
+        So drop by anytime.
+        Thanks.
+      </p>
+      <p><a class="btn btn-danger btn-lg" href="#" disabled="disabled" role="button">Undergoing Maintainance</a></p>
+    </div>
+  </div>
+{% endblock %}
