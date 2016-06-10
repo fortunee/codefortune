@@ -31,12 +31,47 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-fortuneiyke-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li {% if request.path == '/index' or request.path == '/' %}class="active"{% endif %}>
-                          <a href="/index">Home</a>
+                          <a href="/index">
+                            <span {% if request.path == '/index' or request.path == '/' %}
+                                    class="glyphicon glyphicon-home"
+                                  {% endif %}>
+                            </span>Home
+                          </a>
                         </li>
-                        <li><a href="/projects">Projects</a></li>
-                        <li><a href="/blogs">Blogs</a></li>
-                        <li><a href="/about">About me</a></li>
-                        <li><a href="/contact">Contact me</a></li>
+
+                        <li {% if request.path == '/projects' %}class="active"{% endif %}>
+                          <a href="/projects">
+                            <span {% if request.path == '/projects' %}
+                                    class="glyphicon glyphicon-book"
+                                  {% endif %}>
+                            </span>Projects
+                          </a>
+                        </li>
+
+                        <li {% if request.path == '/blogs' %}class="active"{% endif %}>
+                          <a href="/blogs">
+                            <span {% if request.path == '/blogs' or request.path == '/' %}
+                                    class="#"
+                                  {% endif %}>
+                            </span>Blogs
+                          </a>
+                        </li>
+                        <li {% if request.path == '/about' %}class="active"{% endif %}>
+                          <a href="/about">
+                            <span {% if request.path == '/about' %}
+                                    class="glyphicon glyphicon-user"
+                                  {% endif %}>
+                            </span>About me
+                          </a>
+                        </li>
+                        <li {% if request.path == '/contact' %}class="active"{% endif %}>
+                          <a href="/contact">
+                            <span {% if request.path == '/contact' %}
+                                    class="glyphicon glyphicon-pencil"
+                                  {% endif %}>
+                            </span>Contact me
+                          </a>
+                        </li>
                     </ul>
                 </div>
             </div>
