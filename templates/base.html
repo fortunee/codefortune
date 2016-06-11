@@ -42,7 +42,7 @@
                         <li {% if request.path == '/projects' %}class="active"{% endif %}>
                           <a href="/projects">
                             <span {% if request.path == '/projects' %}
-                                    class="glyphicon glyphicon-book"
+                                    class="glyphicon glyphicon-tasks"
                                   {% endif %}>
                             </span>Projects
                           </a>
@@ -51,7 +51,7 @@
                         <li {% if request.path == '/blogs' %}class="active"{% endif %}>
                           <a href="/blogs">
                             <span {% if request.path == '/blogs' or request.path == '/' %}
-                                    class="#"
+                                    class="glyphicon glyphicon-book"
                                   {% endif %}>
                             </span>Blogs
                           </a>

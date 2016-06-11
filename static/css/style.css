@@ -89,6 +89,16 @@ body{
 
 /**Jumbotron or hero custom style ends**/
 
+/** blogs image **/
+.img-height{
+  height:400px;
+  width: 650px;
+}
+
+.blog-title{
+  text-shadow: 1px 3px 1px slateblue;
+  text-align: left;
+}
 /**
     The style below applies to the lrn_mre
     page.
