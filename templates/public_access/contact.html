@@ -13,10 +13,20 @@
         <!--Social media buttons starts-->
 
         <div class="col-md-4 col-sm-5 social_media">
-                <span class="panel-title  text-center"><h2>Social Media Links</h2></span>
-                <a href="#" class="btn btn-primary btn-lg btn-block fb_btn">Facebook</a>
-                <a href="#" class="btn btn-primary btn-lg btn-block twtr_btn">Twitter</a>
-                <a href="#" class="btn btn-primary btn-lg btn-block g_btn">Google+</a>
+                <span class="panel-title  text-center">
+                  <h2>Social Media Links</h2>
+                </span>
+                <a href="http://fb.com/fortune.ik"
+                  class="btn btn-primary btn-lg btn-block fb_btn"
+                  target="_blank">Facebook
+                </a>
+                <a href="http://twitter.com/fortune_ik"
+                  class="btn btn-primary btn-lg btn-block twtr_btn"
+                  target="_blank">Twitter
+                </a>
+                <a href="#" class="btn btn-primary btn-lg btn-block g_btn"
+                  target="_blank">Google+
+                </a>
         </div>
        <!--Social media buttons ends-->
 
@@ -26,14 +36,14 @@
 
            <form action="/contact" method="post" class="form-horizontal" id="contactform">
 
-          <!-- <div class="col-sm-10 col-sm-offset-2 alert alert-success text-center col-md" role="alert">Your message has been sent</div>-->
-
             {{ form.csrf_token }}
             <div class="form-group">
                   <label for="contactname" class="col-sm-2 control-label" >Name</label>
                   <div class="col-sm-10">
                       <p>
-                      {{ form.name(placeholder="Enter Name", class="form-control", id="contactname") }}
+                      {{ form.name(placeholder="Enter Name",
+                      class="form-control", id="contactname")
+                    }}
                       <span class="error">
                         {% if form.name.errors %}
                           {% for error in form.name.errors %}
@@ -48,7 +58,9 @@
                 <label for="contactemail" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
                       <p>
-                      {{ form.email(placeholder="Email", class="form-control", id="contactemail")}}
+                      {{ form.email(placeholder="Email",
+                        class="form-control", id="contactemail")
+                      }}
                       <span class="error">
                         {% if form.email.errors %}
                           {% for error in form.email.errors %}
@@ -63,7 +75,9 @@
                  <label for="contactsubject" class="col-sm-2 control-label">Subject</label>
                  <div class="col-sm-10">
                       <p>
-                      {{ form.subject(placeholder="Subject", class="form-control", id="contactsubject")}}
+                      {{ form.subject(placeholder="Subject",
+                        class="form-control", id="contactsubject")
+                      }}
                       <span class="error">
                         {% if form.subject.errors %}
                           {% for error in form.subject.errors %}
@@ -78,7 +92,10 @@
               <label for="contactmessage" class="col-sm-2 control-label">Message</label>
               <div class="col-sm-10">
                       <p>
-                      {{ form.message(placeholder="Your message",rows='10',cols='87', id="contactmessage", class="form-control", style="width:100%")}}
+                      {{ form.message(placeholder="Your message",rows='10',cols='87',
+                        id="contactmessage", class="form-control",
+                        style="width:100%")
+                      }}
                       <span class="error">
                         {% if form.message.errors %}
                           {% for error in form.message.errors %}

@@ -18,5 +18,5 @@ class ContactForm(Form):
 	)
 	message = TextAreaField(
 		'message',
-		validators=[DataRequired(),Length(min=15, max=290)]
+		validators=[DataRequired(),Length(min=8, max=290)]
 	)
