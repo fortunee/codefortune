@@ -1,10 +1,10 @@
 
 /**
     The image and the string content I added
-    this page was both included within a 
+    this page was both included within a
     jumbotron class of bootstrap
     so if you discover any malfunction just
-    remove the jumbotron class and add them 
+    remove the jumbotron class and add them
     within a div.container class.
 **/
 
@@ -26,11 +26,11 @@
 }
 
 #in_links{
-    color: slateblue;
+    color: aquamarine;
     text-decoration:none;
 }
 #in_links:hover{
-    color: aquamarine;
+    color: slateblue;
     text-decoration: none;
     transition:all 1s ease-in-out;
 }
