@@ -1,2 +1,2 @@
-# codefortunenately
+# codeFortune
 Web Development website
