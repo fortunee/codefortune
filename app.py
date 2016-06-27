@@ -1,11 +1,19 @@
+#############
+## Imports ##
+#############
+
 from flask import Flask, render_template, redirect, url_for, \
     request, flash
 from forms import ContactForm
 from flask.ext.mail import Message, Mail
 import os
 
-#initializing the flask app
-#setting up the config
+##################################
+### initializing the flask app ###
+### setting up the mail config ###
+##################################
+
+
 mail = Mail()
 
 app = Flask(__name__)
@@ -19,33 +27,37 @@ app.config["MAIL_PASSWORD"] = os.environ['PASSWORD']
 
 mail.init_app(app)
 
-#mapping for the index and home page
+############
+## Routes ##
+############
+
+
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
 
-#mapping the learn more page
+
 @app.route('/learn_more')
 def LearnMore():
     return render_template('learn_more_clicked.html')
 
-#mapping the projects page
+
 @app.route('/projects')
 def Projects():
     return render_template('/public_access/projects.html')
 
-#mapping the blogs page
+
 @app.route('/blogs')
 def Blogs():
     return render_template('/public_access/blogs.html')
 
-#mapping the about page
+
 @app.route('/about')
 def About():
     return render_template('/public_access/about.html')
 
-#mapping the contact page
+
 @app.route('/contact', methods=['GET', 'POST'])
 def Contact():
     error = None
@@ -53,11 +65,13 @@ def Contact():
     if request.method == 'POST':
         if form.validate_on_submit():
             try:
-                msg = Message(form.subject.data,
-                sender=form.email.data,
-                recipients=[os.environ['EMAIL'],
-                    os.environ['SECOND_EMAIL'],
-                    os.environ['THIRD_EMAIL']])
+                msg = Message(
+                    form.subject.data,
+                    sender=form.email.data,
+                    recipients=[
+                        os.environ['EMAIL'],
+                        os.environ['SECOND_EMAIL'],
+                        os.environ['THIRD_EMAIL']])
                 msg.body = """
                 From: %s <%s>
                 %s
@@ -65,13 +79,17 @@ def Contact():
                 mail.send(msg)
                 flash("Your message has been sent. Thanks, I'll be in touch")
                 return redirect(url_for('Contact'))
-            except Exception as e:
+            except:
                 error = 'Please check your internet connection and try again'
-                return render_template('/public_access/contact.html', error=error, form=form)
+                return render_template(
+                    '/public_access/contact.html', error=error, form=form
+                )
         else:
-            error = "Please check the form for the incorrect detail(s) and resend. Thanks"
-            return render_template('/public_access/contact.html',
-                error=error, form=form)
+            error = """Please check the form for the incorrect detail(s) \
+                and resend. Thanks"""
+            return render_template(
+                '/public_access/contact.html', error=error, form=form
+            )
     elif request.method == 'GET':
         return render_template('/public_access/contact.html', form=form)
 

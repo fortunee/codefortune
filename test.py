@@ -1,6 +1,7 @@
 import unittest
 from app import app
 
+
 class CodeFortuneTestCase(unittest.TestCase):
     '''is the project up and running properly?'''
 
