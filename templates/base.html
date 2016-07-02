@@ -57,7 +57,7 @@
 
                         <li {% if request.path == '/blogs' %}class="active"{% endif %}>
                           <a href="/blogs">
-                            <span {% if request.path == '/blogs' or request.path == '/' %}
+                            <span {% if request.path == '/blogs' %}
                                     class="glyphicon glyphicon-book"
                                   {% endif %}>
                             </span>Blogs
