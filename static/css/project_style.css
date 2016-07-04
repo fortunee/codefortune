@@ -61,7 +61,7 @@ body{
     padding: 50px;
     margin: 20px;
     transition: all 2s ease-in-out;
-    width: 300px;
+    width: 80%;
 }
 
 .featured_project:hover{
