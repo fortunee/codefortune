@@ -1,4 +1,5 @@
 #codeFortune
+[![Build Status](https://travis-ci.org/MrBoggyice/codefortunenately.svg?branch=master)](https://travis-ci.org/MrBoggyice/codefortunenately)
 Do You need a perfect way to pass information about your brand  
 or product? Do you need a perfect way to get in touch with your  
 clients, customers or friends around the globe?  
