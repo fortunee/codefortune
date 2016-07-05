@@ -55,3 +55,4 @@ appropriate feedbacks such as incorrectly filled forms
 * Fortune Iyke Ekeruo
 
 ##License  
+This project is licenced under MIT 
