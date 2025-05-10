@@ -7,6 +7,6 @@ WTForms==2.1
 Werkzeug==3.0.3
 argparse==1.2.1
 blinker==1.4
-gunicorn==19.6.0
+gunicorn==23.0.0
 itsdangerous==0.24
 wsgiref==0.1.2
